@@ -1,11 +1,11 @@
-#N canvas 462 140 775 572 10;
+#N canvas 336 49 775 572 10;
 #X declare -path abstractions;
 #X obj 158 83 osc~ 440;
 #X obj 304 314 env~;
 #X floatatom 304 335 5 0 0 0 - - -;
 #X obj 365 316 env~;
 #X floatatom 365 337 5 0 0 0 - - -;
-#X obj 449 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 449 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 554 33 declare -path abstractions;
 #X obj 90 266 output_routing violine_out;
@@ -15,17 +15,46 @@
 #X floatatom 176 384 5 0 0 0 - - -;
 #X obj 449 113 s violine_out;
 #X obj 90 130 adc~ 1;
-#N canvas 557 43 679 359 FX 0;
+#N canvas 198 134 864 578 FX 1;
 #X obj 37 37 inlet~;
 #X obj 37 58 *~;
 #X obj 37 79 outlet~;
-#X obj 322 189 s violine;
-#X floatatom 342 147 5 0 0 0 - - -;
-#X obj 294 55 arctan_distortion 10 0.7 violine;
-#X msg 234 237 \; violine distortion foo \;;
+#X obj 29 299 s violine;
+#X floatatom 49 257 5 0 0 0 - - -;
+#X obj 656 151 arctan_distortion 10 0.7 violine;
+#X obj 161 105 readsf~;
+#X msg 145 9 open /Users/maxiestudies/Documents/Programming/PD/Feldmann/kalimba.wav
+\, start;
+#X msg 272 57 open /Users/maxiestudies/Documents/Programming/PD/Feldmann/sax-jazz.wav
+\, start;
+#X obj 173 240 output~;
+#X floatatom 95 133 5 0 0 0 - - -;
+#X obj 114 174 noise~;
+#X obj 656 128 tremolo 5 0.5;
+#X obj 657 174 ring 50 0.5 violine;
+#X floatatom 394 397 5 0 0 0 - - -;
+#X msg 368 431 \; violine pitch-shifter mod_freq \$1 \;;
+#X obj 658 198 pitch-shifter 2 1000 violine;
+#X msg 369 505 \; violine pitch-shifter transposition \$1 \;;
+#X floatatom 379 475 5 0 0 0 - - -;
+#X obj 655 222 harmonizer 0 0 0 5 violine;
+#X msg 479 309 \; violine harmonizer all 5 3 2 1 \;;
+#X obj 659 248 gs~ 2000 30 0 violine;
+#X msg 270 345 \; violine granular feedback 1 \;;
+#X floatatom 445 239 5 0 0 0 - - -;
+#X msg 434 266 \; violine granular sample \$1 \;;
+#X msg 264 307 \; violine granular signal \$1 \;;
+#X floatatom 273 274 5 0 0 0 - - -;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 4 0 3 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 10 0 11 0;
+#X connect 14 0 15 0;
+#X connect 18 0 17 0;
+#X connect 23 0 24 0;
+#X connect 26 0 25 0;
 #X restore 90 151 pd FX;
 #X obj 171 201 pack 0 20;
 #X obj 171 222 line~;
