@@ -1,0 +1,2 @@
+#N canvas 231 208 450 300 10;
+#X obj 147 70 sigmund~ pitch env;
