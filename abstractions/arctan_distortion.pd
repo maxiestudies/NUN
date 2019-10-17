@@ -21,6 +21,9 @@
 #X obj 199 83 route gain vol bypass;
 #X obj 322 128 print \$3;
 #X msg 322 107 something wrong with distortion routing;
+#X obj 67 60 loadbang;
+#X msg 129 136 0;
+#X msg 68 81 0;
 #X connect 0 0 4 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 1;
@@ -47,3 +50,6 @@
 #X connect 19 2 13 0;
 #X connect 19 3 21 0;
 #X connect 21 0 20 0;
+#X connect 22 0 24 0;
+#X connect 23 0 13 0;
+#X connect 24 0 13 0;

@@ -1,0 +1,25 @@
+#N canvas 231 211 922 396 10;
+#X obj 306 50 r \$1;
+#X obj 306 171 pack s s;
+#X msg 306 193 \; \$1 label \$2 \;;
+#X obj 306 92 t b a;
+#X obj 352 107 list prepend symbol;
+#X obj 352 130 list trim;
+#X obj 306 71 route select_fx;
+#X obj 101 101 cnv 15 98 28 empty \$0-select_fx chorus 10 12 0 14 -210580
+-66577 0;
+#X obj 306 150 symbol \$0-select_fx;
+#X obj 663 50 inlet~;
+#X obj 663 71 *~;
+#X obj 663 92 outlet~;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 3 0 8 0;
+#X connect 3 1 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 1;
+#X connect 6 0 3 0;
+#X connect 8 0 1 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X coords 0 -1 1 1 100 30 2 100 100;
