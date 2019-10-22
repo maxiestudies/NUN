@@ -1,20 +1,13 @@
-#N canvas 328 115 886 572 10;
+#N canvas 169 57 999 572 10;
 #X declare -path abstractions;
-#X obj 304 314 env~;
-#X floatatom 304 335 5 0 0 0 - - -;
-#X obj 365 316 env~;
-#X floatatom 365 337 5 0 0 0 - - -;
-#X obj 449 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 554 33 declare -path abstractions;
-#X obj 76 298 output_routing violine_out;
-#X obj 115 390 env~;
-#X floatatom 115 411 5 0 0 0 - - -;
-#X obj 176 392 env~;
-#X floatatom 176 413 5 0 0 0 - - -;
-#X obj 449 113 s violine_out;
-#X obj 76 83 adc~ 1;
-#N canvas 79 81 864 543 FX 0;
+#X obj 22 474 declare -path abstractions;
+#X obj 19 276 output_routing violine_out;
+#X obj 29 367 env~;
+#X floatatom 29 388 5 0 0 0 - - -;
+#X obj 119 370 env~;
+#X floatatom 119 391 5 0 0 0 - - -;
+#X obj 19 61 adc~ 1;
+#N canvas 124 116 864 543 FX 1;
 #X obj 37 37 inlet~;
 #X obj 37 58 *~;
 #X obj 37 79 outlet~;
@@ -22,30 +15,20 @@
 #X floatatom 49 257 5 0 0 0 - - -;
 #X obj 656 151 arctan_distortion 10 0.7 violine;
 #X obj 235 118 readsf~;
-#X obj 150 238 output~;
+#X obj 224 381 output~;
 #X obj 114 174 noise~;
 #X obj 657 174 ring 50 0.5 violine;
-#X floatatom 394 397 5 0 0 0 - - -;
-#X msg 368 431 \; violine pitch-shifter mod_freq \$1 \;;
 #X obj 658 198 pitch-shifter 2 1000 violine;
-#X msg 369 505 \; violine pitch-shifter transposition \$1 \;;
-#X floatatom 379 475 5 0 0 0 - - -;
 #X obj 658 222 harmonizer 0 0 0 5 violine;
-#X msg 479 309 \; violine harmonizer all 5 3 2 1 \;;
 #X obj 659 248 gs~ 2000 30 0 violine;
-#X msg 270 345 \; violine granular feedback 1 \;;
-#X floatatom 493 355 5 0 0 0 - - -;
-#X msg 482 382 \; violine granular sample \$1 \;;
-#X msg 264 307 \; violine granular signal \$1 \;;
-#X floatatom 273 274 5 0 0 0 - - -;
 #X obj 655 103 chorus 4 3 2 8 0.5 0.8 0.6 0.9 violine;
 #X obj 656 128 tremolo 5 0.5 violine;
 #X msg 272 57 open audio/sax-jazz.wav \, start;
 #X msg 145 9 open audio/voice.wav \, start;
 #X obj 656 77 flanger 1 3 0.7 violine;
 #X obj 314 217 compressor~ -30 40 40 0 0 0;
-#X obj 262 238 *~;
-#X obj 293 243 *~;
+#X obj 356 294 *~;
+#X obj 387 299 *~;
 #X obj 354 95 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 354 115 pack 0 20;
@@ -59,48 +42,31 @@
 #X obj 479 55 spigot;
 #X obj 508 26 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#X obj 657 276 delayFX 100 50 violine;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 4 0 3 0;
-#X connect 6 0 29 0;
-#X connect 6 0 28 0;
-#X connect 6 1 39 0;
-#X connect 10 0 11 0;
-#X connect 14 0 13 0;
-#X connect 19 0 20 0;
-#X connect 22 0 21 0;
-#X connect 25 0 6 0;
-#X connect 26 0 6 0;
-#X connect 28 0 30 0;
-#X connect 29 0 7 0;
-#X connect 29 0 7 1;
-#X connect 30 0 7 0;
-#X connect 30 0 7 1;
-#X connect 31 0 32 0;
-#X connect 32 0 33 0;
-#X connect 33 0 29 1;
-#X connect 33 0 34 0;
-#X connect 34 0 35 0;
-#X connect 35 0 30 1;
-#X connect 36 0 28 1;
-#X connect 37 0 36 0;
-#X connect 38 0 25 0;
-#X connect 39 0 38 0;
-#X connect 40 0 39 1;
-#X restore 628 115 pd FX;
-#X obj 76 109 input_routing violine;
-#X obj 169 84 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 642 247 input_routing cello;
-#X msg 646 425 \; cello select_fx distortion \;;
-#X msg 662 484 \; cello select_fx ring \;;
-#X msg 458 456 \; violine select_fx distortion \;;
-#X msg 458 494 \; violine select_fx chorus \;;
-#X obj 76 44 cnv 15 100 30 empty empty Violine 20 12 0 14 -224523 -66577
+#X connect 6 1 29 0;
+#X connect 15 0 6 0;
+#X connect 16 0 6 0;
+#X connect 19 0 7 0;
+#X connect 19 0 7 1;
+#X connect 20 0 7 0;
+#X connect 20 0 7 1;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 26 0 18 1;
+#X connect 27 0 26 0;
+#X connect 28 0 15 0;
+#X connect 29 0 28 0;
+#X connect 30 0 29 1;
+#X restore 22 528 pd FX;
+#X obj 19 22 cnv 15 100 30 empty empty Violine 20 12 0 14 -224523 -66577
 0;
-#X obj 76 231 volume 1 violine;
-#X obj 76 186 fx violine;
-#X msg 430 387 \; violine select_fx granular \;;
+#X obj 19 209 volume 1 violine;
+#X obj 19 164 fx violine;
 #N canvas 0 22 762 300 osc-in 0;
 #X obj 240 58 netreceive -u -b;
 #X obj 240 82 oscparse;
@@ -151,17 +117,28 @@
 #X connect 22 1 14 0;
 #X connect 22 2 23 0;
 #X connect 23 0 24 0;
-#X restore 339 176 pd osc-in;
-#X connect 0 0 1 0;
+#X restore 21 500 pd osc-in;
+#X obj 139 22 cnv 15 100 30 empty empty Viola 25 12 0 14 -224523 -66577
+0;
+#X obj 259 22 cnv 15 100 30 empty empty Cello 25 12 0 14 -224523 -66577
+0;
+#X obj 379 22 cnv 15 100 30 empty empty Piano 25 12 0 14 -224523 -66577
+0;
+#X obj 499 22 cnv 15 100 30 empty empty Drums 30 12 0 14 -224523 -66577
+0;
+#X obj 619 22 cnv 15 100 30 empty empty Sax 35 12 0 14 -224523 -66577
+0;
+#X obj 739 22 cnv 15 100 30 empty empty Oboe 30 12 0 14 -224523 -66577
+0;
+#X obj 859 22 cnv 15 100 30 empty empty Clarinet 20 12 0 14 -224523
+-66577 0;
+#X obj 19 92 input_routing 1 violine;
+#X connect 1 0 2 0;
+#X connect 1 1 4 0;
 #X connect 2 0 3 0;
-#X connect 4 0 11 0;
-#X connect 6 0 7 0;
-#X connect 6 0 9 0;
-#X connect 7 0 8 0;
-#X connect 9 0 10 0;
-#X connect 12 0 14 0;
-#X connect 14 0 23 0;
-#X connect 14 1 22 0;
-#X connect 15 0 14 1;
-#X connect 22 0 6 0;
-#X connect 23 0 22 0;
+#X connect 4 0 5 0;
+#X connect 6 0 19 0;
+#X connect 9 0 1 0;
+#X connect 10 0 9 0;
+#X connect 19 0 9 0;
+#X connect 19 1 9 0;

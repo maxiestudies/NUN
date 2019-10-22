@@ -1,4 +1,4 @@
-#N canvas 196 94 768 344 10;
+#N canvas 344 106 768 344 10;
 #X declare -path abstractions;
 #N canvas 342 171 779 378 expression 0;
 #X obj 19 24 ctlin 7 1;
@@ -85,7 +85,7 @@
 1;
 #X obj 385 78 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 454 78 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 454 78 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 530 79 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -183,10 +183,12 @@
 #X obj 425 80 switcher_stage 3 piano;
 #X obj 537 78 switcher_stage 4 winds;
 #X obj 12 117 stage-osc-out 192.168.178.29 8001;
-#X obj 253 213 ctlin;
-#X floatatom 230 243 5 0 0 0 - - -;
-#X floatatom 277 250 5 0 0 0 - - -;
-#X floatatom 329 248 5 0 0 0 - - -;
+#X obj 204 166 key;
+#X obj 204 187 spigot;
+#X obj 204 208 s keyboard;
+#X obj 237 163 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 257 162 <- Activate Keyboard Input;
 #X connect 13 0 14 0;
-#X connect 13 1 15 0;
-#X connect 13 2 16 0;
+#X connect 14 0 15 0;
+#X connect 16 0 14 1;

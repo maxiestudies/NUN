@@ -19,7 +19,7 @@
 #X msg 224 294 format ssf;
 #X obj 223 270 loadbang;
 #X text 180 7 fetch MIDI control number 3 \, channel in the arguments
-;
+, f 28;
 #X text 259 214 send speaker or transducer followed by number to make
 it easier to use on the receiving side;
 #X text 300 289 set oscformat to format the message into string \,
@@ -31,7 +31,10 @@ string \, float, f 34;
 #X text 5 367 save the random generated number to adress the canvas
 , f 27;
 #X text 264 72 Arguments: MIDI Channel number \, name of instrument
-(group);
+(group), f 37;
+#X obj 21 -32 r keyboard;
+#X obj 21 -10 - 48;
+#X obj 21 12 sel \$1;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
 #X connect 3 0 1 0;
@@ -50,4 +53,7 @@ string \, float, f 34;
 #X connect 14 0 10 0;
 #X connect 15 0 6 0;
 #X connect 16 0 15 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 2 0;
 #X coords 0 -1 1 1 100 30 2 100 100;
