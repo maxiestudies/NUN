@@ -1,0 +1,3 @@
+#N canvas 364 153 450 300 12;
+#X obj 152 42 adc~ \$1;
+#X text 217 42 Input number;

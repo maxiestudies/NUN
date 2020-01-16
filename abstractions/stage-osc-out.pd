@@ -1,4 +1,4 @@
-#N canvas 543 211 450 300 10;
+#N canvas 76 165 738 347 10;
 #X obj 127 277 netsend -u -b;
 #X obj 128 230 list prepend send;
 #X obj 128 251 list trim;
@@ -15,6 +15,11 @@
 #X obj 238 147 pack s f;
 #X text 310 57 ip address;
 #X text 320 87 port number;
+#X obj 440 15 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 440 35 s osc-autotest;
+#X text 539 26 Activates the autotest and sends osc messages from alll
+the objects at the same time to test the patch, f 25;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
@@ -28,3 +33,4 @@
 #X connect 10 0 12 0;
 #X connect 11 0 12 1;
 #X connect 12 0 8 0;
+#X connect 15 0 16 0;

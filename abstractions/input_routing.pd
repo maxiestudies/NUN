@@ -12,11 +12,15 @@
 #X obj 179 253 line~;
 #X obj 113 110 tgl 15 0 empty empty FX 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 192 51 * -1;
-#X obj 192 72 + 1;
-#X obj 114 133 tgl 15 0 empty empty Clean 17 7 0 10 -262144 -1 -1 0
+#X obj 234 119 * -1;
+#X obj 234 140 + 1;
+#X obj 114 133 tgl 15 0 empty empty Clean 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 107 32 ctlin 1 \$1;
+#X obj 112 6 r pedal_data;
+#X obj 112 28 route fx_pedal;
+#X obj 112 55 route \$1;
+#X obj 237 62 loadbang;
+#X msg 237 83 0;
 #X connect 1 0 2 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -30,5 +34,9 @@
 #X connect 11 0 12 0;
 #X connect 12 0 13 0;
 #X connect 13 0 8 0;
-#X connect 14 0 10 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 10 0;
+#X connect 17 0 18 0;
+#X connect 18 0 10 0;
 #X coords 0 -1 1 1 100 60 2 100 100;
