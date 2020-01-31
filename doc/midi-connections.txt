@@ -1,0 +1,10 @@
+Footswitch
+goes into Input 1
+Receives Energy from input 16
+
+Footcontroller 1-4
+goes to Input 2 (Ch 17-32)
+
+Footcontroller 5-8 
+goes to Input 3 (Ch 33-48)
+

@@ -1,4 +1,4 @@
-#N canvas 121 245 1159 396 10;
+#N canvas 121 488 1159 396 10;
 #X obj 306 50 r \$1;
 #X obj 306 171 pack s s;
 #X msg 306 193 \; \$1 label \$2 \;;
@@ -32,11 +32,11 @@
 #X msg 682 131 0;
 #X obj 584 50 route \$2 \$3;
 #X text 92 273 Parameters 1 = Name 2 = FX 1 3 = FX 2;
-#X obj 836 112 ring 200 1 \$1;
-#X obj 836 135 arctan_distortion 10 0.7 \$1;
-#X obj 609 217 del+rev 100 40 \$1;
 #X msg 271 341 \; sax select_fx ring+dist \;;
 #X msg 269 309 \; sax select_fx del+rev \;;
+#X obj 609 217 del+rev 120 45 \$1;
+#X obj 836 112 ring 180 1 \$1;
+#X obj 836 135 arctan_distortion 15 0.7 \$1;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
 #X connect 3 0 8 0;
@@ -46,8 +46,8 @@
 #X connect 6 0 3 0;
 #X connect 6 0 15 0;
 #X connect 8 0 1 0;
-#X connect 9 0 29 0;
 #X connect 9 0 31 0;
+#X connect 9 0 32 0;
 #X connect 10 0 11 0;
 #X connect 12 0 16 0;
 #X connect 13 0 24 0;
@@ -68,7 +68,7 @@
 #X connect 27 0 12 0;
 #X connect 27 1 13 0;
 #X connect 27 2 14 0;
-#X connect 29 0 30 0;
-#X connect 30 0 23 1;
 #X connect 31 0 10 0;
+#X connect 32 0 33 0;
+#X connect 33 0 23 1;
 #X coords 0 -1 1 1 100 30 2 100 100;
