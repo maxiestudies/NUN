@@ -6,7 +6,7 @@
 #X obj 352 107 list prepend symbol;
 #X obj 352 130 list trim;
 #X obj 306 71 route select_fx;
-#X obj 101 101 cnv 15 98 28 empty \$0-select_fx del+rev 10 12 0 14
+#X obj 101 101 cnv 15 98 28 empty \$0-select_fx ring+dist 10 12 0 14
 -210580 -66577 0;
 #X obj 306 150 symbol \$0-select_fx;
 #X obj 789 49 inlet~;
@@ -14,11 +14,11 @@
 #X obj 583 25 t a b;
 #X obj 584 50 route \$2 \$3;
 #X text 92 273 Parameters 1 = Name 2 = FX 1 3 = FX 2;
-#X msg 271 341 \; sax select_fx ring+dist \;;
-#X msg 269 309 \; sax select_fx del+rev \;;
 #X obj 738 232 +~;
 #X obj 696 111 ring 300 4 \$1;
 #X obj 806 109 arctan_distortion 12 0.7 \$1;
+#X msg 271 341 \; violine select_fx ring+dist \;;
+#X obj 271 318 loadbang;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
 #X connect 3 0 8 0;
@@ -28,10 +28,11 @@
 #X connect 6 0 3 0;
 #X connect 6 0 11 0;
 #X connect 8 0 1 0;
-#X connect 9 0 17 0;
-#X connect 9 0 18 0;
+#X connect 9 0 15 0;
+#X connect 9 0 16 0;
 #X connect 11 0 12 0;
-#X connect 16 0 10 0;
-#X connect 17 0 16 0;
-#X connect 18 0 16 1;
+#X connect 14 0 10 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 1;
+#X connect 18 0 17 0;
 #X coords 0 -1 1 1 100 30 2 100 100;
