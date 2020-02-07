@@ -394,7 +394,7 @@ to test the patch, f 22;
 #X coords 0 -1 1 1 85 60 2 100 100;
 #X restore 377 123 pd windsFX;
 #X obj 10 256 stage-osc-out localhost 9006;
-#N canvas 0 22 450 300 wiisounds 1;
+#N canvas 0 22 450 300 wiisounds 0;
 #X obj 166 27 r wii_triggersounds;
 #X obj 165 200 readsf~ 2;
 #X obj 149 267 outlet~;
