@@ -13,3 +13,15 @@ goes to Input 3 (Ch 33-48)
 BCF
 goes to Input 4 (Ch 49-64)
 
+
+--------
+BCF Configuration
+Push buttons upper [1-4] {} [5-8] {cc (11-14), values 0-127, ch 1}
+Push buttons lower [1-7] {notes (60-66), ch 1}
+Encoders [2]{cc 1, ch 1, val 0-127}
+Faders
+
+
+----------
+WidsFC cc10 all
+
