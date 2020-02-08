@@ -1,4 +1,4 @@
-#N canvas 255 165 768 344 10;
+#N canvas 468 108 768 344 10;
 #X declare -path abstractions;
 #X declare -path audio;
 #N canvas 298 258 779 455 expression 0;
@@ -436,6 +436,11 @@ to test the patch, f 22;
 #X obj 311 80 switcher_stage 50 drums;
 #X obj 425 80 switcher_stage 51 piano;
 #X obj 537 78 switcher_stage 52 winds;
+#X obj 525 125 cnv 15 120 160 empty empty empty 20 12 0 14 -109129
+-66577 0;
+#X obj 574 151 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 10000 1;
+#X obj 526 125 ringthing_midiin 49;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 10 0 8 1;
@@ -445,3 +450,4 @@ to test the patch, f 22;
 #X connect 17 1 19 1;
 #X connect 22 0 19 0;
 #X connect 22 1 19 1;
+#X connect 29 0 28 0;
