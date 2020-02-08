@@ -8,3 +8,6 @@ goes to Input 2 (Ch 17-32)
 Footcontroller 5-8 
 goes to Input 3 (Ch 33-48)
 
+BCF 
+goes to Input 4 (Ch 49-64)
+
