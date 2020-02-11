@@ -1,4 +1,4 @@
-#N canvas 121 317 1159 396 10;
+#N canvas 42 316 1159 396 10;
 #X obj 306 50 r \$1;
 #X obj 306 171 pack s s;
 #X msg 306 193 \; \$1 label \$2 \;;
@@ -38,6 +38,7 @@
 #X obj 836 112 ring 180 1 \$1;
 #X obj 836 135 arctan_distortion 15 0.7 \$1;
 #X floatatom 843 220 5 0 0 0 - - -;
+#X obj 741 260 *~ 0.2;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
 #X connect 3 0 8 0;
@@ -61,7 +62,7 @@
 #X connect 20 0 10 1;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
-#X connect 23 0 11 0;
+#X connect 23 0 35 0;
 #X connect 24 0 25 0;
 #X connect 24 1 26 0;
 #X connect 25 0 21 0;
@@ -72,4 +73,5 @@
 #X connect 31 0 10 0;
 #X connect 32 0 33 0;
 #X connect 33 0 23 1;
+#X connect 35 0 11 0;
 #X coords 0 -1 1 1 100 30 2 100 100;
