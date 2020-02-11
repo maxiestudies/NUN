@@ -1,4 +1,4 @@
-#N canvas 121 488 1159 396 10;
+#N canvas 121 317 1159 396 10;
 #X obj 306 50 r \$1;
 #X obj 306 171 pack s s;
 #X msg 306 193 \; \$1 label \$2 \;;
@@ -6,7 +6,7 @@
 #X obj 352 107 list prepend symbol;
 #X obj 352 130 list trim;
 #X obj 306 71 route select_fx;
-#X obj 101 101 cnv 15 98 28 empty \$0-select_fx del+rev 10 12 0 14
+#X obj 101 101 cnv 15 98 28 empty \$0-select_fx ring+dist 10 12 0 14
 -210580 -66577 0;
 #X obj 306 150 symbol \$0-select_fx;
 #X obj 774 80 inlet~;
@@ -37,6 +37,7 @@
 #X obj 609 217 del+rev 120 45 \$1;
 #X obj 836 112 ring 180 1 \$1;
 #X obj 836 135 arctan_distortion 15 0.7 \$1;
+#X floatatom 843 220 5 0 0 0 - - -;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
 #X connect 3 0 8 0;
