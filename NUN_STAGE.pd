@@ -1,4 +1,4 @@
-#N canvas 413 361 768 344 10;
+#N canvas 353 228 768 344 10;
 #X declare -path abstractions;
 #X declare -path audio;
 #N canvas 298 258 779 455 expression 0;
@@ -214,6 +214,7 @@ to test the patch, f 22;
 #X obj 335 254 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 417 270 s wii_triggersound;
+#X obj 54 89 loadbang;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
@@ -256,6 +257,7 @@ to test the patch, f 22;
 #X connect 29 2 13 0;
 #X connect 29 3 30 0;
 #X connect 30 0 31 0;
+#X connect 32 0 3 0;
 #X restore 11 315 pd osc-in;
 #X obj 24 17 key;
 #X obj 24 38 spigot;
@@ -436,9 +438,11 @@ to test the patch, f 22;
 #X obj 525 125 cnv 15 120 160 empty empty empty 20 12 0 14 -109129
 -66577 0;
 #X obj 574 151 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8500 1;
+-1 -1 0 1;
 #X obj 526 125 ringthing_midiin 49;
-#X obj 10 256 stage-osc-out localhost 9006;
+#X obj 10 256 stage-osc-out 169.254.190.89 9006;
+#X obj 359 253 cnv 15 100 60 empty ringthing_presets four 20 12 0 24
+-258113 -66577 0;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 10 0 8 1;

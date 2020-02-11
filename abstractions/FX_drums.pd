@@ -1,4 +1,4 @@
-#N canvas 14 39 1159 396 10;
+#N canvas 43 66 1280 412 10;
 #X obj 306 50 r \$1;
 #X obj 306 171 pack s s;
 #X msg 306 193 \; \$1 label \$2 \;;
@@ -6,7 +6,7 @@
 #X obj 352 107 list prepend symbol;
 #X obj 352 130 list trim;
 #X obj 306 71 route select_fx;
-#X obj 101 101 cnv 15 98 28 empty \$0-select_fx chorus 10 12 0 14 -210580
+#X obj 101 101 cnv 15 98 28 empty \$0-select_fx gs 10 12 0 14 -210580
 -66577 0;
 #X obj 306 150 symbol \$0-select_fx;
 #X obj 950 55 inlet~;
@@ -41,9 +41,10 @@
 #X msg 329 310 \; drums select_fx flanger \;;
 #X msg 328 344 \; drums select_fx gs \;;
 #X obj 915 225 flanger 100 20 0.9 \$1;
-#X obj 1180 213 gs~ 1000 20 1 \$1;
 #X obj 602 218 chorus 4 3 9 8 0.5 0.8 0.6 0.9 \$1;
 #X msg 327 278 \; drums select_fx chorus \;;
+#X obj 788 269 *~ 0.5;
+#X obj 1180 213 gs~ 1000 50 1 \$1;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
 #X connect 3 0 8 0;
@@ -55,7 +56,7 @@
 #X connect 8 0 1 0;
 #X connect 9 0 37 0;
 #X connect 9 0 38 0;
-#X connect 9 0 39 0;
+#X connect 9 0 41 0;
 #X connect 10 0 11 0;
 #X connect 12 0 16 0;
 #X connect 13 0 24 0;
@@ -69,7 +70,7 @@
 #X connect 20 0 10 1;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
-#X connect 23 0 11 0;
+#X connect 23 0 40 0;
 #X connect 24 0 25 0;
 #X connect 24 1 26 0;
 #X connect 25 0 21 0;
@@ -86,6 +87,7 @@
 #X connect 34 1 13 0;
 #X connect 34 2 14 0;
 #X connect 37 0 23 1;
-#X connect 38 0 30 1;
-#X connect 39 0 10 0;
+#X connect 38 0 10 0;
+#X connect 40 0 11 0;
+#X connect 41 0 30 1;
 #X coords 0 -1 1 1 100 30 2 100 100;
