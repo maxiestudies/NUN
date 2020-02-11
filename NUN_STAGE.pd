@@ -1,4 +1,4 @@
-#N canvas 353 228 768 344 10;
+#N canvas 110 158 768 344 10;
 #X declare -path abstractions;
 #X declare -path audio;
 #N canvas 298 258 779 455 expression 0;
@@ -283,7 +283,7 @@ to test the patch, f 22;
 #X msg 21 113 12;
 #X obj 91 129 ctlout 7 17;
 #X msg 77 104 127;
-#N canvas 86 111 644 508 file_playback 0;
+#N canvas 32 105 644 508 file_playback 0;
 #X obj 101 101 cnv 15 158 58 empty empty Soundfiles 50 14 1 14 -262130
 -66577 0;
 #X obj 381 248 readsf~ 2;
@@ -297,25 +297,32 @@ to test the patch, f 22;
 #X msg 381 132 open ./audio/nun_5.wav \, start;
 #X msg 380 110 open ./audio/nun_6.wav \, start;
 #X msg 380 88 open ./audio/nun_7.wav \, start;
-#X obj 106 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 128 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 150 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 172 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 195 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 217 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 239 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 106 140 tgl 15 0 empty tog1 empty 17 7 0 10 -262144 -33289 -1
+0 1;
+#X obj 128 140 tgl 15 0 empty tog2 empty 17 7 0 10 -262144 -33289 -1
+0 1;
+#X obj 150 140 tgl 15 0 empty tog3 empty 17 7 0 10 -262144 -33289 -1
+0 1;
+#X obj 172 140 tgl 15 0 empty tog4 empty 17 7 0 10 -262144 -33289 -1
+0 1;
+#X obj 195 140 tgl 15 0 empty tog5 empty 17 7 0 10 -262144 -33289 -1
+0 1;
+#X obj 217 140 tgl 15 0 empty tog6 empty 17 7 0 10 -262144 -33289 -1
+0 1;
+#X obj 239 140 tgl 15 0 empty tog7 empty 17 7 0 10 -262144 -33289 -1
+0 1;
 #X obj 93 19 notein;
 #X obj 93 43 sel 60 61 62 63 64 65 66 67 68;
 #X msg 270 107 0;
 #X obj 302 198 key;
 #X obj 300 220 sel 27;
+#X obj 106 165 togcolor tog1;
+#X obj 125 185 togcolor tog2;
+#X obj 145 205 togcolor tog3;
+#X obj 165 225 togcolor tog4;
+#X obj 185 245 togcolor tog5;
+#X obj 205 265 togcolor tog6;
+#X obj 225 285 togcolor tog7;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
 #X connect 1 2 21 0;
@@ -327,6 +334,13 @@ to test the patch, f 22;
 #X connect 9 0 1 0;
 #X connect 10 0 1 0;
 #X connect 11 0 1 0;
+#X connect 12 0 24 0;
+#X connect 13 0 25 0;
+#X connect 14 0 26 0;
+#X connect 15 0 27 0;
+#X connect 16 0 28 0;
+#X connect 17 0 29 0;
+#X connect 18 0 30 0;
 #X connect 19 0 20 0;
 #X connect 20 0 4 0;
 #X connect 20 0 12 0;
@@ -438,7 +452,7 @@ to test the patch, f 22;
 #X obj 525 125 cnv 15 120 160 empty empty empty 20 12 0 14 -109129
 -66577 0;
 #X obj 574 151 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #X obj 526 125 ringthing_midiin 49;
 #X obj 10 256 stage-osc-out 169.254.190.89 9006;
 #X obj 359 253 cnv 15 100 60 empty ringthing_presets four 20 12 0 24

@@ -1,0 +1,14 @@
+#N canvas 460 69 450 300 12;
+#X obj 37 37 inlet;
+#X obj 37 93 symbol \$1;
+#X obj 37 65 sel 1;
+#X msg 37 117 \; \$1 color 15 12;
+#X obj 69 188 symbol \$1;
+#X msg 69 212 \; \$1 color 0 12;
+#X obj 69 160 t b;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 1 6 0;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
