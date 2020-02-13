@@ -23,6 +23,7 @@
 #X obj 112 58 route speaker transducer;
 #X msg 114 79 1;
 #X msg 160 79 0;
+#X obj 264 233 inlet~;
 #X connect 1 0 2 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -43,4 +44,5 @@
 #X connect 18 1 20 0;
 #X connect 19 0 10 0;
 #X connect 20 0 10 0;
+#X connect 21 0 4 0;
 #X coords 0 -1 1 1 100 60 2 100 100;

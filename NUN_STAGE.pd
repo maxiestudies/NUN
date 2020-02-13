@@ -1,4 +1,4 @@
-#N canvas 465 142 768 344 10;
+#N canvas 422 198 768 344 10;
 #X declare -path abstractions;
 #X declare -path audio;
 #N canvas 298 258 779 455 expression 0;
@@ -95,11 +95,11 @@ to test the patch, f 22;
 #X obj 390 208 sel 127;
 #X obj 458 208 sel 127;
 #X obj 535 209 sel 127;
-#X obj 25 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 25 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 103 234 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 103 234 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 173 233 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 173 233 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 249 234 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -280,10 +280,10 @@ to test the patch, f 22;
 #X connect 4 0 2 0;
 #X connect 5 0 4 0;
 #X restore 11 180 pd more-osc-autotest;
-#X obj 21 135 noteout;
-#X msg 21 113 12;
-#X obj 91 129 ctlout 7 17;
-#X msg 77 104 127;
+#X obj 18 145 noteout;
+#X msg 18 123 12;
+#X obj 88 139 ctlout 7 17;
+#X msg 74 114 127;
 #N canvas 593 102 644 508 file_playback 0;
 #X obj 101 101 cnv 15 158 58 empty empty Soundfiles 50 14 1 14 -262130
 -66577 0;
@@ -470,6 +470,9 @@ to test the patch, f 22;
 #X obj 10 256 stage-osc-out 169.254.190.89 9006;
 #X obj 359 253 cnv 15 100 60 empty ringthing_presets one 20 30 0 24
 -258113 -66577 0;
+#X obj 713 72 loadbang;
+#X msg 713 93 \; pd dsp 1;
+#X obj 41 82 loadbang;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 10 0 8 1;
@@ -478,3 +481,6 @@ to test the patch, f 22;
 #X connect 21 0 19 0;
 #X connect 21 1 19 1;
 #X connect 28 0 27 0;
+#X connect 31 0 32 0;
+#X connect 33 0 14 0;
+#X connect 33 0 16 0;
