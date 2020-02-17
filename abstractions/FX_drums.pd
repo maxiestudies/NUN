@@ -6,7 +6,7 @@
 #X obj 352 107 list prepend symbol;
 #X obj 352 130 list trim;
 #X obj 306 71 route select_fx;
-#X obj 101 101 cnv 15 98 28 empty \$0-select_fx gs 10 12 0 14 -210580
+#X obj 101 101 cnv 15 98 28 empty \$0-select_fx chorus 10 12 0 14 -210580
 -66577 0;
 #X obj 306 150 symbol \$0-select_fx;
 #X obj 950 55 inlet~;

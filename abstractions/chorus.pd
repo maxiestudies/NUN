@@ -1,8 +1,8 @@
 #N canvas 96 158 766 428 10;
-#X obj 148 350 outlet~;
+#X obj 136 376 outlet~;
 #X obj 441 121 delwrite~ \$0-buffer 100;
 #X obj 442 97 inlet~;
-#X obj 167 299 +~;
+#X obj 136 333 +~;
 #X obj 54 241 delread4~ \$0-buffer;
 #X obj 207 242 delread4~ \$0-buffer;
 #X obj 251 263 delread4~ \$0-buffer;
@@ -20,7 +20,7 @@
 #X obj 99 157 f \$6;
 #X obj 140 157 f \$7;
 #X obj 181 157 f \$8;
-#X obj 157 324 *~ 0.5;
+#X obj 136 354 *~ 0.5;
 #X obj 182 2 r \$9;
 #X obj 182 23 route chorus;
 #X obj 182 44 route mod_freq amp_freq;
