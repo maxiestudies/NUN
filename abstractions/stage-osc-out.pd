@@ -1,4 +1,4 @@
-#N canvas 513 366 738 347 10;
+#N canvas 160 366 738 347 10;
 #X obj 128 230 list prepend send;
 #X obj 128 251 list trim;
 #X msg 274 242 disconnect;
